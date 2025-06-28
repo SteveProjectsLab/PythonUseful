@@ -1,0 +1,27 @@
+STEP PRELIMINARI
+- installa python3.13 da win store
+- crea cartella sul desktop "LTSPICE + PYTHON"
+- in powershell come amministratore: Set-ExecutionPolicy Unrestricted
+
+source:
+https://pypi.org/project/PyLTSpice/
+
+creating virtual env:
+https://www.youtube.com/watch?v=ySk09NKutm8&ab_channel=CodewithJosh
+
+
+
+- python3 -m venv LTSpicePY_env
+- LTSpicePY_env/Scripts/activate
+- pip install PyLTSpice
+- pip install --upgrade PyLTSpice
+- pip list
+- deactivate
+- activate
+- pip freeze > requirements.txt
+
+
+se passi il tutto e usi un altro pc
+- unzippa i file
+- apri la cartella con vscode
+- pip install "C:\Users\stefa\Desktop\LTSPICE + PYTHON\requirements.txt"
