@@ -1,4 +1,5 @@
-STEP PRELIMINARI
+--------------------------STEP PRELIMINARI--------------------------------
+
 - installa python3.13 da win store
 - crea cartella sul desktop "LTSPICE + PYTHON"
 - in powershell come amministratore: Set-ExecutionPolicy Unrestricted
@@ -6,10 +7,8 @@ STEP PRELIMINARI
 source:
 https://pypi.org/project/PyLTSpice/
 
-creating virtual env:
+--------------------------CREARE VENV--------------------------------
 https://www.youtube.com/watch?v=ySk09NKutm8&ab_channel=CodewithJosh
-
-
 
 - python3 -m venv LTSpicePY_env
 - LTSpicePY_env/Scripts/activate
@@ -19,6 +18,8 @@ https://www.youtube.com/watch?v=ySk09NKutm8&ab_channel=CodewithJosh
 - deactivate
 - activate
 - pip freeze > requirements.txt
+
+--------------------------USARE LA REPO--------------------------------
 
 
 se passi il tutto e usi un altro pc
