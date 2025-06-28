@@ -10,19 +10,22 @@ https://pypi.org/project/PyLTSpice/
 --------------------------CREARE VENV--------------------------------
 https://www.youtube.com/watch?v=ySk09NKutm8&ab_channel=CodewithJosh
 
-- python3 -m venv LTSpicePY_env
-- LTSpicePY_env/Scripts/activate
-- pip install PyLTSpice
-- pip install --upgrade PyLTSpice
-- pip list
-- deactivate
-- activate
-- pip freeze > requirements.txt
+- apro cartella con vscode
+- apri terminale ed esegui i seguenti comandi
+
+python3 -m venv LTSpicePY_env
+LTSpicePY_env/Scripts/activate
+pip install PyLTSpice
+pip install --upgrade PyLTSpice
+pip list
+deactivate
+activate
+pip freeze > requirements.txt
 
 --------------------------USARE LA REPO--------------------------------
+https://github.com/SteveProjectsLab/PythonUseful/tree/main/LTSPICE%20%2B%20PYTHON
 
-
-se passi il tutto e usi un altro pc
-- unzippa i file
+- scarica e unzippa i file
 - apri la cartella con vscode
-- pip install "C:\Users\stefa\Desktop\LTSPICE + PYTHON\requirements.txt"
+- apri terminale ed esegui
+pip install "C:\Users\stefa\Desktop\LTSPICE + PYTHON\requirements.txt"
