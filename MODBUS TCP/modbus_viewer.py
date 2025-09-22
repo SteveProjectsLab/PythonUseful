@@ -10,11 +10,9 @@ SLAVE_ID=1
 DWORD = 2
 WORD =1
 BOOL =1
-
 # --- Connect to PLC ---
 client = ModbusTcpClient(PLC_IP, port=PLC_PORT)
 client.connect()
-
 while(1):
     holding_regs_results = client.read_holding_registers(address=0, count=4,device_id=SLAVE_ID) 
     input_regs_results = client.read_input_registers(address=0, count=16, device_id=SLAVE_ID)
@@ -26,8 +24,6 @@ while(1):
         if rr.isError():
             print(f"Error reading MD{md_number}")
             return None
-
-        # Decode 32-bit float
         decoder = BinaryPayloadDecoder.fromRegisters(
             rr.registers,
             byteorder=Endian.Big,   # byte order
@@ -44,8 +40,7 @@ while(1):
         discrete = int(discrete_inputs_result.bits[0])
         coil = int(coils_result.bits[0])
         hold_reg =int(holding_regs_results.registers[0])
-        input_reg =int(input_regs_results.registers[0])
-       
+        input_reg =int(input_regs_results.registers[0])  
         print("BTN(%IX0.1): ", not(discrete), "| LED(%QX0.3): ", not(not(coil)), "| POT_ADC_raw(%IW0.0):", input_reg,
               "| LED_DAC_avg(%QW0.0):", hold_reg,"| MD0:", md0,"| MD2:", md2,"| MD4:", md4)
     else:
